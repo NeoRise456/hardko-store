@@ -1,0 +1,22 @@
+import { Routes } from '@angular/router';
+
+export const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./log-in/log-in.routes')
+  },
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/features/product-shell/product.routes')
+  },
+  {
+    path: 'cart',
+    loadChildren: ()=> import('./cart/cart.routes')
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  },
+];
