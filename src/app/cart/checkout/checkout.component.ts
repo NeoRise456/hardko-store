@@ -14,7 +14,7 @@ import {CartStateService} from "../../shared/data-access/cart-state.service";
 export default class CheckoutComponent {
   private cartStateService = inject(CartStateService);
 
-  clearCart(){
+  clearCart() {
     this.cartStateService.getItems().forEach(item => {
       this.cartStateService.state.remove(item.product.id);
     })
